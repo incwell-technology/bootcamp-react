@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
+import HomePage from './components/homepage';
+import Navbar from './components/common/navbar';
+import About from './components/about';
+import Course from './components/course';
+import Mentors from './components/mentors';
+import Events from './components/events';
+import Contact from './components/contact';
+import Enroll from './components/enroll';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar>  </Navbar>
+      <Switch>
+        <Route path="/" exact component={HomePage}/>
+        <Route path="/about"  component={About}/>
+        <Route path="/courses"  component={Course}/>
+        <Route path="/mentors"  component={Mentors}/>
+        <Route path="/events"  component={Events}/>
+        <Route path="/contact"  component={Contact}/>
+        <Route path="/enroll"  component={Enroll}/>
+      </Switch>
+    </Router>
   );
 }
+
 
 export default App;
