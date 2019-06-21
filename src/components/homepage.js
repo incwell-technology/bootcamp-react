@@ -4,7 +4,7 @@ import React from 'react';
 function HomePage() {
   return (
     <>
-        <h1>This is Home Page</h1>
+        <h1 class="btn btn-success">This is Home Page</h1>
     </>
   );
 }

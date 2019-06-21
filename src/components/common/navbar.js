@@ -1,47 +1,46 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import logo from  '../../logo.png';
-import './App.css';
 
 function Navbar() {
   return (
-    <nav class="navbar navibar">
-      <div class="container-fluid">
+    <nav className="navbar navibar">
+      <div className="container-fluid">
         <div class="navbar-header">
           <NavLink exact to="/" className="navbar-brand">
-          <img src={logo} class="logo"/>
+          <img src={logo} className="logo"/>
           </NavLink>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li class="navlist">
+        <ul className="nav navbar-nav navbar-right">
+          <li className="navlist">
             <NavLink to="/about" activeClassName="nav-active" className="navlink">
               About Us
             </NavLink>
           </li>
-          <li class="navlist">
+          <li className="navlist">
             <NavLink to="/courses" activeClassName="nav-active"  className="navlink">
               Courses
             </NavLink>
           </li>
-          <li class="navlist">
+          <li className="navlist">
           <NavLink to="/mentors" activeClassName="nav-active" className="navlink">
             Mentors
             </NavLink>
           </li>
-          <li class="navlist">
+          <li className="navlist">
           <NavLink to="/events" activeClassName="nav-active" className="navlink">
             Events
             </NavLink>
           </li>
-          <li class="navlist">
-          <NavLink to="/courses" activeClassName="nav-active" className="navlink">
+          <li className="navlist">
+          <NavLink to="/contact" activeClassName="nav-active" className="navlink">
             Contact
             </NavLink>
           </li>
-          <li class="unset-nav">
-          <NavLink to="/enroll" activeClassName="nav-active" className="navlink-Enroll">
-            Enroll
+          <li className="unset-nav">
+            <NavLink to="/enroll" className="navlink-Enroll">
+              Enroll
             </NavLink>
           </li>
         </ul>
